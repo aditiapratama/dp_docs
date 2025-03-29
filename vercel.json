@@ -1,5 +1,14 @@
 {
   "rewrites": [
+    { "source": "/assets/(.*)", "destination": "/assets/$1" },
+    {
+      "source": "/(.*\\.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot))",
+      "destination": "/$1"
+    },
+    { "source": "/(.*)", "destination": "/$1" },
+    { "source": "/(.*)/", "destination": "/$1" },
+    { "source": "/(.*)\\.(html)", "destination": "/$1.html" },
     { "source": "/(.*)", "destination": "/index.html" }
-  ]
+  ],
+  "trailingSlash": false
 }
